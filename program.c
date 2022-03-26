@@ -8,10 +8,10 @@
 int pipeChildrenToParent[2];
 int pipeParentToChild[2];
 
-void startChild(char *ip);
 void parentProcess();
 void *printErrorThread();
 void childProcess();
+void startChild(char *ip);
 
 int main(void)
 {
@@ -35,21 +35,6 @@ int main(void)
     return 0;
 }
 
-void *printErrorThread()
-{
-    char returnedIP[256];
-
-    while (read(pipeChildrenToParent[0], returnedIP, sizeof(returnedIP)) > 0)
-    {
-        printf("Could not reach %s\n", returnedIP);
-    }
-
-    // close reading end
-    close(pipeChildrenToParent[0]);
-
-    return NULL;
-}
-
 void parentProcess()
 {
     // close reading end
@@ -61,6 +46,12 @@ void parentProcess()
     FILE *ipsFile;
 
     ipsFile = fopen("ips.dat", "r");
+    if (ipsFile == NULL)
+    {
+        perror("Failed");
+        exit(1);
+    }
+
     int currentIP_len = 256;
     char currentIP[currentIP_len];
 
@@ -84,9 +75,23 @@ void parentProcess()
     fclose(ipsFile);
 }
 
+void *printErrorThread()
+{
+    char returnedIP[256];
+
+    while (read(pipeChildrenToParent[0], returnedIP, sizeof(returnedIP)) > 0)
+    {
+        printf("Could not reach %s\n", returnedIP);
+    }
+
+    // close reading end
+    close(pipeChildrenToParent[0]);
+
+    return NULL;
+}
+
 void childProcess()
 {
-
     // close writing end
     close(pipeParentToChild[1]);
 
