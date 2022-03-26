@@ -10,7 +10,7 @@ int pipeParentToChild[2];
 
 void startChild(char *ip);
 void parentProcess();
-void *printErrorThread(void *var);
+void *printErrorThread();
 void childProcess();
 
 int main(void)
@@ -35,7 +35,7 @@ int main(void)
     return 0;
 }
 
-void *printErrorThread(void *var)
+void *printErrorThread()
 {
     char returnedIP[256];
 
