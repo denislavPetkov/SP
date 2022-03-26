@@ -46,6 +46,8 @@ void *printErrorThread(void *var)
 
     // close reading end
     close(pipeChildrenToParent[0]);
+
+    return NULL;
 }
 
 void parentProcess()
