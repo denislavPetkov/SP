@@ -8,7 +8,7 @@ int pipeSecondChildrenToFirst[2];
 
 void startChild(char *ip)
 {
-    printf("Testing ip %s \n", ip);
+    printf("Testing %s", ip);
 
     FILE *fp;
 
@@ -17,7 +17,8 @@ void startChild(char *ip)
 
     if (fork() == 0)
     {
-        char command[64] = "/bin/ping -c 1 ";
+        // redirect the stderr to stdout
+        char command[64] = "/bin/ping 2>&1 -c 1 ";
         strcat(command, ip);
 
         fp = popen(command, "r");
@@ -49,6 +50,7 @@ int main(int argc, char **argv)
 
     FILE *ipsFile;
 
+    // create pipes
     pipe(pipeFirstToSecond);
     pipe(pipeSecondChildrenToFirst);
 
@@ -56,6 +58,8 @@ int main(int argc, char **argv)
     {
         // close writing end
         close(pipeFirstToSecond[1]);
+
+        // close reading end
         close(pipeSecondChildrenToFirst[0]);
 
         char ip[128];
@@ -66,8 +70,12 @@ int main(int argc, char **argv)
             startChild(ip);
         }
 
+        // close reading end
         close(pipeFirstToSecond[0]);
+
+        // close writing end
         close(pipeSecondChildrenToFirst[1]);
+
         wait(NULL);
     }
     else // parent - first
@@ -94,9 +102,10 @@ int main(int argc, char **argv)
 
         char buff[256];
 
+        printf("\n");
         while (read(pipeSecondChildrenToFirst[0], buff, sizeof(buff)) > 0)
         {
-            printf("Could not reach IP %s\n", buff);
+            printf("Could not reach %s", buff);
         }
 
         // close reading end
