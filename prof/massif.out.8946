@@ -1,0 +1,494 @@
+desc: --time-unit=ms --stacks=yes
+cmd: ./test.out
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=4
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=288
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=8
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1152
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=12
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=6432
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=16
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=7392
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=5
+#-----------
+time=20
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=3984
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=23
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=4584
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=47
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=4576
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=48
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5464
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=266
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5456
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=270
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1160
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=274
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=278
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=880
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=282
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=64
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=286
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=192
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=15
+#-----------
+time=288
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=224
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=290
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=480
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=292
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=568
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=294
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=848
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=296
+mem_heap_B=744
+mem_heap_extra_B=24
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=299
+mem_heap_B=4840
+mem_heap_extra_B=32
+mem_stacks_B=1160
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=2299
+mem_heap_B=4840
+mem_heap_extra_B=32
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=2300
+mem_heap_B=4840
+mem_heap_extra_B=32
+mem_stacks_B=1144
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=3329
+mem_heap_B=4840
+mem_heap_extra_B=32
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=3331
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=3312
+heap_tree=peak
+n3: 5864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x48EDD33: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x48FDEFF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x48FCCD3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+    n1: 4096 0x48FDFB5: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x48EF89B: _IO_getline_info (iogetline.c:60)
+      n1: 4096 0x48EE6F9: fgets (iofgets.c:53)
+       n1: 4096 0x1095D1: parentProcess (program.c:65)
+        n0: 4096 0x109467: main (program.c:32)
+   n1: 1024 0x48FCF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48FB6E4: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x48FB6E4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48E29A1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x48CDD6E: printf (printf.c:33)
+        n1: 1024 0x109694: printErrorThread (program.c:84)
+         n1: 1024 0x4851608: start_thread (pthread_create.c:477)
+          n0: 1024 0x498B162: clone (clone.S:95)
+ n1: 472 0x48EE95D: __fopen_internal (iofopen.c:65)
+  n1: 472 0x48EE95D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+   n1: 472 0x1094C5: parentProcess (program.c:48)
+    n0: 472 0x109467: main (program.c:32)
+ n1: 272 0x40149CA: allocate_dtv (dl-tls.c:286)
+  n1: 272 0x40149CA: _dl_allocate_tls (dl-tls.c:532)
+   n1: 272 0x4852322: allocate_stack (allocatestack.c:622)
+    n1: 272 0x4852322: pthread_create@@GLIBC_2.2.5 (pthread_create.c:660)
+     n1: 272 0x1095AE: parentProcess (program.c:59)
+      n0: 272 0x109467: main (program.c:32)
+#-----------
+snapshot=25
+#-----------
+time=3333
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=2984
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=3335
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=2904
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=4300
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=6300
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=8301
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=9363
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=10301
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=10400
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=detailed
+n3: 5864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x48EDD33: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x48FDEFF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x48FCCD3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+    n1: 4096 0x48FDFB5: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x48EF89B: _IO_getline_info (iogetline.c:60)
+      n1: 4096 0x48EE6F9: fgets (iofgets.c:53)
+       n1: 4096 0x1095D1: parentProcess (program.c:65)
+        n0: 4096 0x109467: main (program.c:32)
+   n1: 1024 0x48FCF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48FB6E4: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x48FB6E4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48E29A1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x48CDD6E: printf (printf.c:33)
+        n1: 1024 0x109694: printErrorThread (program.c:84)
+         n1: 1024 0x4851608: start_thread (pthread_create.c:477)
+          n0: 1024 0x498B162: clone (clone.S:95)
+ n1: 472 0x48EE95D: __fopen_internal (iofopen.c:65)
+  n1: 472 0x48EE95D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+   n1: 472 0x1094C5: parentProcess (program.c:48)
+    n0: 472 0x109467: main (program.c:32)
+ n1: 272 0x40149CA: allocate_dtv (dl-tls.c:286)
+  n1: 272 0x40149CA: _dl_allocate_tls (dl-tls.c:532)
+   n1: 272 0x4852322: allocate_stack (allocatestack.c:622)
+    n1: 272 0x4852322: pthread_create@@GLIBC_2.2.5 (pthread_create.c:660)
+     n1: 272 0x1095AE: parentProcess (program.c:59)
+      n0: 272 0x109467: main (program.c:32)
+#-----------
+snapshot=33
+#-----------
+time=12301
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=14301
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=16301
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=16302
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1176
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=18302
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=18342
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=18343
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=3144
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=20302
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=20303
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1352
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=21498
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=detailed
+n3: 5864 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x48EDD33: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x48FDEFF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x48FCCD3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+    n1: 4096 0x48FDFB5: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x48EF89B: _IO_getline_info (iogetline.c:60)
+      n1: 4096 0x48EE6F9: fgets (iofgets.c:53)
+       n1: 4096 0x1095D1: parentProcess (program.c:65)
+        n0: 4096 0x109467: main (program.c:32)
+   n1: 1024 0x48FCF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48FB6E4: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x48FB6E4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48E29A1: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x48CDD6E: printf (printf.c:33)
+        n1: 1024 0x109694: printErrorThread (program.c:84)
+         n1: 1024 0x4851608: start_thread (pthread_create.c:477)
+          n0: 1024 0x498B162: clone (clone.S:95)
+ n1: 472 0x48EE95D: __fopen_internal (iofopen.c:65)
+  n1: 472 0x48EE95D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+   n1: 472 0x1094C5: parentProcess (program.c:48)
+    n0: 472 0x109467: main (program.c:32)
+ n1: 272 0x40149CA: allocate_dtv (dl-tls.c:286)
+  n1: 272 0x40149CA: _dl_allocate_tls (dl-tls.c:532)
+   n1: 272 0x4852322: allocate_stack (allocatestack.c:622)
+    n1: 272 0x4852322: pthread_create@@GLIBC_2.2.5 (pthread_create.c:660)
+     n1: 272 0x1095AE: parentProcess (program.c:59)
+      n0: 272 0x109467: main (program.c:32)
+#-----------
+snapshot=43
+#-----------
+time=22303
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=1320
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=22304
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=848
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=22314
+mem_heap_B=5864
+mem_heap_extra_B=40
+mem_stacks_B=840
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=22316
+mem_heap_B=1768
+mem_heap_extra_B=32
+mem_stacks_B=824
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=22318
+mem_heap_B=1296
+mem_heap_extra_B=16
+mem_stacks_B=728
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=22320
+mem_heap_B=1296
+mem_heap_extra_B=16
+mem_stacks_B=704
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=22323
+mem_heap_B=272
+mem_heap_extra_B=8
+mem_stacks_B=664
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=22324
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=680
+heap_tree=empty

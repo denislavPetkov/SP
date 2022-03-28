@@ -1,0 +1,30 @@
+valgrind --tool=massif --time-unit=ms ./test.out   
+ms_print massif.out.
+
+==8946== Massif, a heap profiler
+==8946== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
+==8946== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==8946== Command: ./test.out
+==8946== 
+==8949== 
+Could not reach test.com
+
+==8964== 
+==8976== 
+==8979== 
+Could not reach hehe.bg
+
+==9012== 
+Could not reach psTestAddress.com
+
+==9015== 
+==9035== 
+==9057== 
+==9060== 
+Could not reach shouldNotWork.bg
+
+==9108== 
+Could not reach lastOne.com
+==9111== 
+==8947== 
+==8946== 

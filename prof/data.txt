@@ -1,0 +1,203 @@
+--------------------------------------------------------------------------------
+Command:            ./test.out
+Massif arguments:   --time-unit=ms --stacks=yes
+ms_print arguments: massif.out.8946
+--------------------------------------------------------------------------------
+
+
+    KB
+9.000^          #                                                             
+     |          #::                                              ::::::       
+     |          #                                                :            
+     |          #                                                :            
+     |@         #                                                :            
+     |@         #  ::::::::::::::::::::@@@@@@:::::::::::::::::::::     ::::@@:
+     |@         #  :      :     :   :  @     :      :     :      :     :   @ :
+     |@:::::::::#  :      :     :   :  @     :      :     :      :     :   @ :
+     |@      :  #  :      :     :   :  @     :      :     :      :     :   @ :
+     |@      :  #  :      :     :   :  @     :      :     :      :     :   @ :
+     |@      :  #  :      :     :   :  @     :      :     :      :     :   @ :
+     |@      :  #  :      :     :   :  @     :      :     :      :     :   @ :
+     |@      :  #  :      :     :   :  @     :      :     :      :     :   @ :
+     |@      :  #  :      :     :   :  @     :      :     :      :     :   @ :
+     |@      :  #  :      :     :   :  @     :      :     :      :     :   @ :
+     |@      :  #  :      :     :   :  @     :      :     :      :     :   @ :
+     |@      :  #  :      :     :   :  @     :      :     :      :     :   @ :
+     |@      :  #  :      :     :   :  @     :      :     :      :     :   @ :
+     |@      :  #  :      :     :   :  @     :      :     :      :     :   @ :
+     |@      :  #  :      :     :   :  @     :      :     :      :     :   @ :
+   0 +----------------------------------------------------------------------->s
+     0                                                                   22.32
+
+Number of snapshots: 51
+ Detailed snapshots: [4, 14, 24 (peak), 32, 42]
+
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1              4              288                0             0          288
+  2              8            1,152                0             0        1,152
+  3             12            6,432                0             0        6,432
+  4             16            7,392                0             0        7,392
+00.00% (0B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  5             20            3,984                0             0        3,984
+  6             23            4,584                0             0        4,584
+  7             47            4,576                0             0        4,576
+  8             48            5,464                0             0        5,464
+  9            266            5,456                0             0        5,456
+ 10            270            1,160                0             0        1,160
+ 11            274            1,688                0             0        1,688
+ 12            278              880                0             0          880
+ 13            282               64                0             0           64
+ 14            286              192                0             0          192
+00.00% (0B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 15            288              224                0             0          224
+ 16            290              968              472            16          480
+ 17            292            1,056              472            16          568
+ 18            294            1,336              472            16          848
+ 19            296            1,392              744            24          624
+ 20            299            6,032            4,840            32        1,160
+ 21          2,299            6,192            4,840            32        1,320
+ 22          2,300            6,016            4,840            32        1,144
+ 23          3,329            6,192            4,840            32        1,320
+ 24          3,331            9,216            5,864            40        3,312
+63.63% (5,864B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->55.56% (5,120B) 0x48EDD33: _IO_file_doallocate (filedoalloc.c:101)
+| ->55.56% (5,120B) 0x48FDEFF: _IO_doallocbuf (genops.c:347)
+|   ->44.44% (4,096B) 0x48FCCD3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+|   | ->44.44% (4,096B) 0x48FDFB5: _IO_default_uflow (genops.c:362)
+|   |   ->44.44% (4,096B) 0x48EF89B: _IO_getline_info (iogetline.c:60)
+|   |     ->44.44% (4,096B) 0x48EE6F9: fgets (iofgets.c:53)
+|   |       ->44.44% (4,096B) 0x1095D1: parentProcess (program.c:65)
+|   |         ->44.44% (4,096B) 0x109467: main (program.c:32)
+|   |           
+|   ->11.11% (1,024B) 0x48FCF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->11.11% (1,024B) 0x48FB6E4: _IO_new_file_xsputn (fileops.c:1244)
+|       ->11.11% (1,024B) 0x48FB6E4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->11.11% (1,024B) 0x48E29A1: __vfprintf_internal (vfprintf-internal.c:1373)
+|           ->11.11% (1,024B) 0x48CDD6E: printf (printf.c:33)
+|             ->11.11% (1,024B) 0x109694: printErrorThread (program.c:84)
+|               ->11.11% (1,024B) 0x4851608: start_thread (pthread_create.c:477)
+|                 ->11.11% (1,024B) 0x498B162: clone (clone.S:95)
+|                   
+->05.12% (472B) 0x48EE95D: __fopen_internal (iofopen.c:65)
+| ->05.12% (472B) 0x48EE95D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->05.12% (472B) 0x1094C5: parentProcess (program.c:48)
+|     ->05.12% (472B) 0x109467: main (program.c:32)
+|       
+->02.95% (272B) 0x40149CA: allocate_dtv (dl-tls.c:286)
+  ->02.95% (272B) 0x40149CA: _dl_allocate_tls (dl-tls.c:532)
+    ->02.95% (272B) 0x4852322: allocate_stack (allocatestack.c:622)
+      ->02.95% (272B) 0x4852322: pthread_create@@GLIBC_2.2.5 (pthread_create.c:660)
+        ->02.95% (272B) 0x1095AE: parentProcess (program.c:59)
+          ->02.95% (272B) 0x109467: main (program.c:32)
+            
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 25          3,333            8,888            5,864            40        2,984
+ 26          3,335            8,808            5,864            40        2,904
+ 27          4,300            7,224            5,864            40        1,320
+ 28          6,300            7,224            5,864            40        1,320
+ 29          8,301            7,224            5,864            40        1,320
+ 30          9,363            7,224            5,864            40        1,320
+ 31         10,301            7,224            5,864            40        1,320
+ 32         10,400            7,224            5,864            40        1,320
+81.17% (5,864B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->70.87% (5,120B) 0x48EDD33: _IO_file_doallocate (filedoalloc.c:101)
+| ->70.87% (5,120B) 0x48FDEFF: _IO_doallocbuf (genops.c:347)
+|   ->56.70% (4,096B) 0x48FCCD3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+|   | ->56.70% (4,096B) 0x48FDFB5: _IO_default_uflow (genops.c:362)
+|   |   ->56.70% (4,096B) 0x48EF89B: _IO_getline_info (iogetline.c:60)
+|   |     ->56.70% (4,096B) 0x48EE6F9: fgets (iofgets.c:53)
+|   |       ->56.70% (4,096B) 0x1095D1: parentProcess (program.c:65)
+|   |         ->56.70% (4,096B) 0x109467: main (program.c:32)
+|   |           
+|   ->14.17% (1,024B) 0x48FCF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->14.17% (1,024B) 0x48FB6E4: _IO_new_file_xsputn (fileops.c:1244)
+|       ->14.17% (1,024B) 0x48FB6E4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->14.17% (1,024B) 0x48E29A1: __vfprintf_internal (vfprintf-internal.c:1373)
+|           ->14.17% (1,024B) 0x48CDD6E: printf (printf.c:33)
+|             ->14.17% (1,024B) 0x109694: printErrorThread (program.c:84)
+|               ->14.17% (1,024B) 0x4851608: start_thread (pthread_create.c:477)
+|                 ->14.17% (1,024B) 0x498B162: clone (clone.S:95)
+|                   
+->06.53% (472B) 0x48EE95D: __fopen_internal (iofopen.c:65)
+| ->06.53% (472B) 0x48EE95D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->06.53% (472B) 0x1094C5: parentProcess (program.c:48)
+|     ->06.53% (472B) 0x109467: main (program.c:32)
+|       
+->03.77% (272B) 0x40149CA: allocate_dtv (dl-tls.c:286)
+  ->03.77% (272B) 0x40149CA: _dl_allocate_tls (dl-tls.c:532)
+    ->03.77% (272B) 0x4852322: allocate_stack (allocatestack.c:622)
+      ->03.77% (272B) 0x4852322: pthread_create@@GLIBC_2.2.5 (pthread_create.c:660)
+        ->03.77% (272B) 0x1095AE: parentProcess (program.c:59)
+          ->03.77% (272B) 0x109467: main (program.c:32)
+            
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 33         12,301            7,224            5,864            40        1,320
+ 34         14,301            7,224            5,864            40        1,320
+ 35         16,301            7,224            5,864            40        1,320
+ 36         16,302            7,080            5,864            40        1,176
+ 37         18,302            7,224            5,864            40        1,320
+ 38         18,342            7,224            5,864            40        1,320
+ 39         18,343            9,048            5,864            40        3,144
+ 40         20,302            7,224            5,864            40        1,320
+ 41         20,303            7,256            5,864            40        1,352
+ 42         21,498            7,224            5,864            40        1,320
+81.17% (5,864B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->70.87% (5,120B) 0x48EDD33: _IO_file_doallocate (filedoalloc.c:101)
+| ->70.87% (5,120B) 0x48FDEFF: _IO_doallocbuf (genops.c:347)
+|   ->56.70% (4,096B) 0x48FCCD3: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+|   | ->56.70% (4,096B) 0x48FDFB5: _IO_default_uflow (genops.c:362)
+|   |   ->56.70% (4,096B) 0x48EF89B: _IO_getline_info (iogetline.c:60)
+|   |     ->56.70% (4,096B) 0x48EE6F9: fgets (iofgets.c:53)
+|   |       ->56.70% (4,096B) 0x1095D1: parentProcess (program.c:65)
+|   |         ->56.70% (4,096B) 0x109467: main (program.c:32)
+|   |           
+|   ->14.17% (1,024B) 0x48FCF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->14.17% (1,024B) 0x48FB6E4: _IO_new_file_xsputn (fileops.c:1244)
+|       ->14.17% (1,024B) 0x48FB6E4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->14.17% (1,024B) 0x48E29A1: __vfprintf_internal (vfprintf-internal.c:1373)
+|           ->14.17% (1,024B) 0x48CDD6E: printf (printf.c:33)
+|             ->14.17% (1,024B) 0x109694: printErrorThread (program.c:84)
+|               ->14.17% (1,024B) 0x4851608: start_thread (pthread_create.c:477)
+|                 ->14.17% (1,024B) 0x498B162: clone (clone.S:95)
+|                   
+->06.53% (472B) 0x48EE95D: __fopen_internal (iofopen.c:65)
+| ->06.53% (472B) 0x48EE95D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->06.53% (472B) 0x1094C5: parentProcess (program.c:48)
+|     ->06.53% (472B) 0x109467: main (program.c:32)
+|       
+->03.77% (272B) 0x40149CA: allocate_dtv (dl-tls.c:286)
+  ->03.77% (272B) 0x40149CA: _dl_allocate_tls (dl-tls.c:532)
+    ->03.77% (272B) 0x4852322: allocate_stack (allocatestack.c:622)
+      ->03.77% (272B) 0x4852322: pthread_create@@GLIBC_2.2.5 (pthread_create.c:660)
+        ->03.77% (272B) 0x1095AE: parentProcess (program.c:59)
+          ->03.77% (272B) 0x109467: main (program.c:32)
+            
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 43         22,303            7,224            5,864            40        1,320
+ 44         22,304            6,752            5,864            40          848
+ 45         22,314            6,744            5,864            40          840
+ 46         22,316            2,624            1,768            32          824
+ 47         22,318            2,040            1,296            16          728
+ 48         22,320            2,016            1,296            16          704
+ 49         22,323              944              272             8          664
+ 50         22,324              680                0             0          680
+
+ Може да се види, че при стартирането на приложението паметта използвана от процес 1 е 0 и в продължение на времето започва да се дига. Когато достигне своят максимум, не спада веднага а поддържа горе-долу еднакъв разход до края на приложението.
+ Което е и очакваното поведение, понеже преди краят на приложението бива освободена използваната от приложението памет.
