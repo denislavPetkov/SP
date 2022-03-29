@@ -67,12 +67,12 @@ void parentProcess()
         sleep(2);
     }
 
+    fclose(ipsFile);
+
     // close writing end
     close(pipeParentToChild[1]);
 
     wait(NULL);
-
-    fclose(ipsFile);
 }
 
 void *printErrorThread()
